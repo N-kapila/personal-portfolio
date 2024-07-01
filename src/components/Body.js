@@ -144,7 +144,7 @@ function Body() {
               Nirmal Kapilarathne
             </Typography>
             <Typography variant="h4" gutterBottom>
-              Frontend Developer
+              Web Developer
             </Typography>
             <Typography
               variant="subtitle1"
