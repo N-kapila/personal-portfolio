@@ -536,7 +536,7 @@ function Body() {
               <Button
                 size="small"
                 color="primary"
-                href="https://github.com/N-kapila/eMedicalApp"
+                href="https://github.com/N-kapila/B.Can"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
