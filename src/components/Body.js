@@ -151,16 +151,15 @@ function Body() {
               gutterBottom
               sx={{ textAlign: "justify" }}
             >
-              Welcome to my portfolio! As a dedicated front-end developer, I
-              excel at transforming concepts into visually compelling and
-              functional websites. My expertise in modern web technologies and
-              meticulous attention to detail enable me to craft seamless user
-              experiences. Great design is about more than aesthetics; it's
-              about creating intuitive and accessible interfaces. With a passion
-              for coding and a keen eye for design, I deliver responsive,
-              high-performance websites that exceed expectations. Let's
-              collaborate to bring your vision to life with innovative and
-              functional digital experiences.
+              Welcome to my portfolio! As a dedicated web developer, I excel at
+              transforming concepts into visually compelling and functional
+              websites. My expertise in modern web technologies and meticulous
+              attention to detail enable me to craft seamless user experiences.
+              Great design is about more than aesthetics; it's about creating
+              intuitive and accessible interfaces. With a passion for coding and
+              a keen eye for design, I deliver responsive, high-performance
+              websites that exceed expectations. Let's collaborate to bring your
+              vision to life with innovative and functional digital experiences.
             </Typography>
 
             <Button
@@ -230,7 +229,7 @@ function Body() {
               </Typography>
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body1" gutterBottom>
-                  <strong>Frontend Development</strong>
+                  <strong>Web Development</strong>
                   <br />
                   <Typography variant="body2">1+ years</Typography>
                 </Typography>
