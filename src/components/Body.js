@@ -19,6 +19,7 @@ import {
   ListItemAvatar,
   ListItemText,
   Avatar,
+  Tooltip,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import SchoolIcon from "@mui/icons-material/School";
@@ -617,18 +618,20 @@ function Body() {
                   sx={{ fontSize: 40, mr: 5, mb: 1 }}
                   color="primary"
                 />{" "}
-                <Link
-                  href="mailto:nirmalkapilarathne.se@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  color="inherit"
-                  underline="hover"
-                >
-                  <h2>
-                    <b>Email</b>
-                  </h2>
-                </Link>
-              </Box>{" "}
+                <Tooltip title="nirmalkapilarathne.se@gmail.com" arrow>
+                  <Link
+                    href="mailto:nirmalkapilarathne.se@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    underline="hover"
+                  >
+                    <h2>
+                      <b>Email</b>
+                    </h2>
+                  </Link>
+                </Tooltip>
+              </Box>
               <Box
                 sx={{
                   display: "flex",
