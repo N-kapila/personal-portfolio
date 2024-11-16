@@ -38,6 +38,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import user from "../assests/user1.png";
 import resume from "../assests/cv.pdf";
 import med from "../assests/med.jpg";
+import fashion from "../assests/fashion.png";
 import learn from "../assests/learning.jpg";
 import Bcan from "../assests/B can.jpg";
 import image from "../assests/image.jpg";
@@ -185,7 +186,6 @@ function Body() {
           </Grid>
         </Grid>
       </Box>
-
       <Box id="experience" sx={{ p: 5, mt: 5 }}>
         <Box
           sx={{
@@ -232,7 +232,7 @@ function Body() {
                 <Typography variant="body1" gutterBottom>
                   <strong>Web Development</strong>
                   <br />
-                  <Typography variant="body2">1+ years</Typography>
+                  <Typography variant="body2">2+ years</Typography>
                 </Typography>
               </Box>
             </Item>
@@ -333,6 +333,7 @@ function Body() {
         </Grid>
       </Box>
 
+      {/* Projects start */}
       <Box id="projects" sx={{ p: 5, mt: 5 }}>
         <Box
           sx={{
@@ -408,6 +409,70 @@ function Body() {
                 size="small"
                 color="primary"
                 href="https://github.com/N-kapila/eMedicalApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "#6B9AB4",
+                    color: "white",
+                  },
+                  borderRadius: "8px",
+                  padding: "5px 16px",
+                }}
+              >
+                Github
+              </Button>
+            </CardActions>
+          </Card>
+
+          <Card
+            sx={{
+              maxWidth: 345,
+              minWidth: 190,
+              border: "1px solid #ccc",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            }}
+          >
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="200"
+                image={fashion}
+                alt="eLearningApp"
+                sx={{
+                  transition: "transform 0.3s ease-in-out",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                  },
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                }}
+              />
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  fashion.lk
+                </Typography>
+                <Typography variant="body2" color="text.primary">
+                  Designed and developed a website enabling photographers and
+                  modeling agencies to upload and share photos with others.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Button
+                size="small"
+                color="primary"
+                href="https://github.com/N-kapila/models-site"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
@@ -554,6 +619,9 @@ function Body() {
           </Card>
         </Stack>
       </Box>
+      {/* Projects end */}
+
+      {/* Contact me */}
       <Box id="contact" sx={{ p: 5, mt: 5 }}>
         <Box
           sx={{
