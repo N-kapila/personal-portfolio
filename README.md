@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+***** After update codes are pushed to the main branch, run ### `npm run deploy` command to update the live demo. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
