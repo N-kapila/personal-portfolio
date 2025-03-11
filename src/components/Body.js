@@ -41,9 +41,10 @@ import med from "../assests/med.jpg";
 import fashion from "../assests/fashion.png";
 import learn from "../assests/learning.jpg";
 import Bcan from "../assests/B can.jpg";
+import spicy from "../assests/spicy.png";
 import image from "../assests/image.jpg";
 import reactAvatar from "../assests/react.png";
-import angularAvatar from "../assests/angular.png";
+import nativeAvatar from "../assests/native.png";
 import vueAvatar from "../assests/vue.png";
 import cssAvatar from "../assests/css.png";
 import jsAvatar from "../assests/js.png";
@@ -352,272 +353,129 @@ function Body() {
             Projects
           </Typography>
         </Box>
-        <Stack
-          justifyContent="space-around"
-          alignItems="center"
-          direction={{ xs: "column", sm: "row" }}
-          spacing={{ xs: 2, sm: 2, md: 4 }}
-          textAlign="center"
+
+        <Box
+          sx={{
+            overflowX: "auto",
+            whiteSpace: "nowrap",
+            scrollbarWidth: "thin",
+            "&::-webkit-scrollbar": {
+              height: "8px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#888",
+              borderRadius: "4px",
+            },
+            "&::-webkit-scrollbar-thumb:hover": {
+              background: "#555",
+            },
+            display: { xs: "block", sm: "flex" },
+          }}
         >
-          <Card
+          <Stack
+            direction="row"
+            spacing={2}
             sx={{
-              maxWidth: 345,
-              minWidth: 190,
-              border: "1px solid #ccc",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              display: "inline-flex",
             }}
           >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="200"
-                image={med}
-                alt="eMedicalApp"
+            {[
+              {
+                title: "fashion.lk",
+                image: fashion,
+                desc: "Designed and developed a website enabling photographers and modeling agencies to upload and share photos with others",
+                link: "https://github.com/N-kapila/models-site",
+              },
+              {
+                title: "eMedicalApp",
+                image: med,
+                desc: " Developed prototypes in React, Vue, and Angular frameworks integrated with FHIR servers for fetching SNOMED CT medical data.",
+                link: "https://github.com/N-kapila/eMedicalApp",
+              },
+              {
+                title: "eLearningApp",
+                image: learn,
+                desc: "Developed an online learning application that allows teachers to upload papers and enables students to complete them via website.",
+                link: "https://github.com/N-kapila/Learning-App",
+              },
+              {
+                title: "Spicy World",
+                image: spicy,
+                desc: "Spicy World, a beautifully designed, user-friendly, simple mobile app created to help restaurants seamlessly share their offerings with food lovers.",
+                link: "https://github.com/N-kapila/Restaurant-app",
+              },
+              {
+                title: "B.Can App",
+                image: Bcan,
+                desc: " Created a web app for breast cancer patients, aiding their treatment journey with personalized care and medical information.",
+                link: "https://github.com/N-kapila/B.Can",
+              },
+              // Add more projects here...
+            ].map((project, index) => (
+              <Card
+                key={index}
                 sx={{
-                  objectFit: "initial",
-                  transition: "transform 0.3s ease-in-out",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
+                  maxWidth: 300,
+                  minWidth: 190,
+                  border: "1px solid #ccc",
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "bold" }}
-                >
-                  eMedicalApp
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Developed prototypes in React, Vue, and Angular frameworks
-                  integrated with FHIR servers for fetching SNOMED CT medical
-                  data.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                size="small"
-                color="primary"
-                href="https://github.com/N-kapila/eMedicalApp"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "#6B9AB4",
-                    color: "white",
-                  },
-                  borderRadius: "8px",
-                  padding: "5px 16px",
+                  flexShrink: 0, // Prevents shrinking when scrolling
                 }}
               >
-                Github
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card
-            sx={{
-              maxWidth: 345,
-              minWidth: 190,
-              border: "1px solid #ccc",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="200"
-                image={fashion}
-                alt="eLearningApp"
-                sx={{
-                  transition: "transform 0.3s ease-in-out",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "bold" }}
-                >
-                  fashion.lk
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Designed and developed a website enabling photographers and
-                  modeling agencies to upload and share photos with others.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                size="small"
-                color="primary"
-                href="https://github.com/N-kapila/models-site"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "#6B9AB4",
-                    color: "white",
-                  },
-                  borderRadius: "8px",
-                  padding: "5px 16px",
-                }}
-              >
-                Github
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card
-            sx={{
-              maxWidth: 345,
-              minWidth: 190,
-              border: "1px solid #ccc",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="200"
-                image={learn}
-                alt="eLearningApp"
-                sx={{
-                  transition: "transform 0.3s ease-in-out",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "bold" }}
-                >
-                  eLearningApp
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Developed an online learning application that allows teachers
-                  to upload papers and enables students to complete them.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                size="small"
-                color="primary"
-                href="https://github.com/N-kapila/Learning-App"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "#6B9AB4",
-                    color: "white",
-                  },
-                  borderRadius: "8px",
-                  padding: "5px 16px",
-                }}
-              >
-                Github
-              </Button>
-            </CardActions>
-          </Card>
-          <Card
-            sx={{
-              maxWidth: 345,
-              minWidth: 190,
-              border: "1px solid #ccc",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-            }}
-          >
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                height="200"
-                image={Bcan}
-                alt="B.Can App"
-                sx={{
-                  objectFit: "initial",
-                  transition: "transform 0.3s ease-in-out",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
-                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
-                }}
-              />
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: "bold" }}
-                >
-                  B.Can App
-                </Typography>
-                <Typography variant="body2" color="text.primary">
-                  Created a web app for breast cancer patients, aiding their
-                  treatment journey with personalized care and medical
-                  information.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Button
-                size="small"
-                color="primary"
-                href="https://github.com/N-kapila/B.Can"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  "&:hover": {
-                    backgroundColor: "#6B9AB4",
-                    color: "white",
-                  },
-                  borderRadius: "8px",
-                  padding: "5px 16px",
-                }}
-              >
-                Github
-              </Button>
-            </CardActions>
-          </Card>
-        </Stack>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{
+                      transition: "transform 0.3s ease-in-out",
+                      "&:hover": { transform: "scale(1.05)" },
+                      boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                    }}
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ fontWeight: "bold", textAlign: "center" }}
+                    >
+                      {project.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.primary"
+                      sx={{
+                        textAlign: "justify",
+                        overflow: "visible",
+                        whiteSpace: "normal",
+                      }}
+                    >
+                      {project.desc}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      "&:hover": { backgroundColor: "#6B9AB4", color: "white" },
+                      borderRadius: "8px",
+                      padding: "5px 16px",
+                    }}
+                  >
+                    Github
+                  </Button>
+                </CardActions>
+              </Card>
+            ))}
+          </Stack>
+        </Box>
       </Box>
       {/* Projects end */}
 
@@ -863,7 +721,7 @@ const skills = [
 
       {
         name: "JavaScript",
-        level: "Basic",
+        level: "Intermediate",
         avatar: jsAvatar,
       },
       { name: "Git", level: "Intermediate", avatar: githubAvatar },
@@ -886,11 +744,11 @@ const skills = [
     skills: [
       {
         name: "React",
-        level: "Intermediate",
+        level: "Experienced",
         avatar: reactAvatar,
       },
 
-      { name: "Angular", level: "Basic", avatar: angularAvatar },
+      { name: "React Native", level: "Basic", avatar: nativeAvatar },
       {
         name: "Bootstrap",
         level: "Intermediate",
@@ -902,7 +760,7 @@ const skills = [
         level: "Intermediate",
         avatar: vueAvatar,
       },
-      { name: "Next.js", level: "Basic", avatar: nextAvatar },
+      { name: "Next.js", level: "Intermediate", avatar: nextAvatar },
       {
         name: "Material UI",
         level: "Intermediate",
