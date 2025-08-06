@@ -42,6 +42,11 @@ import fashion from "../assests/fashion.png";
 import learn from "../assests/learning.jpg";
 import Bcan from "../assests/B can.jpg";
 import spicy from "../assests/spicy.png";
+import me from "../assests/me.png";
+import magnitude from "../assests/magnitude.png";
+import freedom from "../assests/freedom.png";
+import ascentia from "../assests/ascentia.png";
+import GOgo from "../assests/gogo.png";
 import image from "../assests/image.jpg";
 import reactAvatar from "../assests/react.png";
 import nativeAvatar from "../assests/native.png";
@@ -334,7 +339,7 @@ function Body() {
         </Grid>
       </Box>
 
-      {/* Projects start */}
+      {/*Code base Projects start */}
       <Box id="projects" sx={{ p: 5, mt: 5 }}>
         <Box
           sx={{
@@ -383,26 +388,32 @@ function Body() {
               {
                 title: "fashion.lk",
                 image: fashion,
-                desc: "Designed and developed a website enabling photographers and modeling agencies to upload and share photos with others",
+                desc: "Designed and developed a website enabling photographers and modeling agencies to upload and share photos with others.",
                 link: "https://github.com/N-kapila/models-site",
-              },
-              {
-                title: "eMedicalApp",
-                image: med,
-                desc: " Developed prototypes in React, Vue, and Angular frameworks integrated with FHIR servers for fetching SNOMED CT medical data.",
-                link: "https://github.com/N-kapila/eMedicalApp",
+                demoLink: "https://models-site.vercel.app/",
               },
               {
                 title: "eLearningApp",
                 image: learn,
                 desc: "Developed an online learning application that allows teachers to upload papers and enables students to complete them via website.",
                 link: "https://github.com/N-kapila/Learning-App",
+                demoLink:
+                  "https://online-learning-9725ho1ft-nirmal-kapilarathnes-projects.vercel.app/",
+              },
+              {
+                title: "eMedicalApp",
+                image: med,
+                desc: " Developed prototypes in React, Vue, and Angular frameworks integrated with FHIR servers for fetching SNOMED CT medical data.",
+                link: "https://github.com/N-kapila/eMedicalApp",
+                demoLink: "https://github.com/N-kapila/eMedicalApp",
               },
               {
                 title: "Spicy World",
                 image: spicy,
                 desc: "Spicy World, a beautifully designed, user-friendly, simple mobile app created to help restaurants seamlessly share their offerings with food lovers.",
                 link: "https://github.com/N-kapila/Restaurant-app",
+                demoLink:
+                  "https://www.linkedin.com/posts/nirmal-kapilarathne-79b7331a1_reactnative-expogo-mobileappdevelopment-activity-7286334499406196736-mUKp/?utm_source=share&utm_medium=member_desktop",
               },
               {
                 title: "B.Can App",
@@ -415,7 +426,174 @@ function Body() {
               <Card
                 key={index}
                 sx={{
-                  maxWidth: 300,
+                  maxWidth: 320,
+                  minWidth: 190,
+                  border: "1px solid #ccc",
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                  flexShrink: 0, // Prevents shrinking when scrolling
+                }}
+              >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    height="220"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{
+                      transition: "transform 0.3s ease-in-out",
+                      "&:hover": { transform: "scale(1.05)" },
+                      boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                    }}
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{ fontWeight: "bold", textAlign: "center" }}
+                    >
+                      {project.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.primary"
+                      sx={{
+                        textAlign: "justify",
+                        overflow: "visible",
+                        whiteSpace: "normal",
+                      }}
+                    >
+                      {project.desc}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+                  <Button
+                    size="small"
+                    color="primary"
+                    variant="contained"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      backgroundColor: "#1976d2",
+                      color: "white",
+                      "&:hover": {
+                        backgroundColor: "#115293",
+                        color: "white",
+                      },
+                      borderRadius: "8px",
+                      padding: "5px 16px",
+                    }}
+                  >
+                    Github
+                  </Button>
+                </CardActions>
+                <CardActions sx={{ display: "flex", justifyContent: "center" }}>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      "&:hover": { backgroundColor: "#6B9AB4", color: "white" },
+                      borderRadius: "8px",
+                      padding: "5px 16px",
+                    }}
+                  >
+                    Live Demo
+                  </Button>
+                </CardActions>
+              </Card>
+            ))}
+          </Stack>
+        </Box>
+      </Box>
+      {/* Code base Projects end */}
+
+      {/*E-commerce Projects start */}
+      <Box id="projects" sx={{ p: 5, mt: 5 }}>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "100%",
+            justifyContent: "center",
+            textAlign: "center",
+            mb: 3,
+          }}
+        >
+          <Typography variant="h6" gutterBottom>
+            Browse My Recent
+          </Typography>
+          <Typography variant="h3" gutterBottom>
+            E-commerce Projects
+          </Typography>
+        </Box>
+
+        <Box
+          sx={{
+            overflowX: "auto",
+            whiteSpace: "nowrap",
+            scrollbarWidth: "thin",
+            "&::-webkit-scrollbar": {
+              height: "8px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+              background: "#888",
+              borderRadius: "4px",
+            },
+            "&::-webkit-scrollbar-thumb:hover": {
+              background: "#555",
+            },
+            display: { xs: "block", sm: "flex" },
+          }}
+        >
+          <Stack
+            direction="row"
+            spacing={2}
+            sx={{
+              display: "inline-flex",
+            }}
+          >
+            {[
+              {
+                title: "M|E",
+                image: me,
+                desc: "Switzerland-based eCommerce website specializing in premium jewelry and home products. Built using Shopify for seamless shopping and easy management.",
+                demoLink: "https://meshop.ch/",
+              },
+              {
+                title: "Magnitude",
+                image: magnitude,
+                desc: "UAE-based eCommerce website for selling Magnitude bags. Created using Shopify for smooth online shopping and easy store management.",
+                demoLink: "https://projectmagnitude.com/",
+              },
+              {
+                title: "Freedom Wellness",
+                image: freedom,
+                desc: "New Zealand-based eCommerce website for physiotherapy equipment. Built using Shopify for easy management and secure online sales.",
+                demoLink: "https://freedomwellness.co.nz/",
+              },
+              {
+                title: "Ascentia Consulting",
+                image: ascentia,
+                desc: "UAE-based business consulting website built with WordPress. It features a clean design, service sections, and easy finance management.",
+                demoLink: "https://ascentiacg.com/staging/",
+              },
+              {
+                title: "GOGO Hat",
+                image: GOgo,
+                desc: "UAE-based eCommerce website specializing in premium hats and clothing. Built on Shopify for smooth shopping and easy store management.",
+                demoLink: "https://gogo-hats.com/",
+              },
+              // Add more projects here...
+            ].map((project, index) => (
+              <Card
+                key={index}
+                sx={{
+                  maxWidth: 320,
                   minWidth: 190,
                   border: "1px solid #ccc",
                   boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
@@ -460,7 +638,7 @@ function Body() {
                   <Button
                     size="small"
                     color="primary"
-                    href={project.link}
+                    href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     sx={{
@@ -469,7 +647,7 @@ function Body() {
                       padding: "5px 16px",
                     }}
                   >
-                    Github
+                    Live Site
                   </Button>
                 </CardActions>
               </Card>
@@ -477,7 +655,7 @@ function Body() {
           </Stack>
         </Box>
       </Box>
-      {/* Projects end */}
+      {/* E-commerce Projects end */}
 
       {/* Contact me */}
       <Box id="contact" sx={{ p: 5, mt: 5 }}>
